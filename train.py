@@ -36,7 +36,7 @@ X_train_scaled = scaler.fit_transform(X_train_full)
 X_val_scaled = scaler.transform(X_val)
 X_test_scaled = scaler.transform(X_test)
 
-model = RandomForestRegressor(n_estimators=200, max_depth=15, random_state=1, n_jobs=-1)
+model = RandomForestRegressor(n_estimators=50, max_depth=10, random_state=1, n_jobs=-1)
 model.fit(X_train_full, y_train_full)
 
 
