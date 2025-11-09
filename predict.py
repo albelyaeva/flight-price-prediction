@@ -9,12 +9,12 @@ label_encoders = pickle.load(open("label_encoders.pkl", "rb"))
 features = pickle.load(open("features.pkl", "rb"))
 
 time_map = {
-    'Late_Night': 0,
-    'Night': 1,
-    'Early_Morning': 2,
-    'Morning': 3,
-    'Afternoon': 4,
-    'Evening': 5
+    'Early Morning': 1,
+    'Morning': 2,
+    'Afternoon': 3,
+    'Evening': 4,
+    'Night': 5,
+    'Late Night': 6
 }
 
 @app.route("/predict", methods=["POST"])
@@ -43,4 +43,4 @@ def predict():
     return jsonify({"predicted_price": float(pred)})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=9696, debug=True)
+    app.run(host="0.0.0.0", port=9696)
