@@ -1,0 +1,12 @@
+{
+  "airline": "Vistara",
+  "flight": "UK-811",
+  "source_city": "Delhi",
+  "departure_time": "Evening",
+  "stops": "1 stop",
+  "arrival_time": "Night",
+  "destination_city": "Bangalore",
+  "class": "Business",
+  "duration": 155,
+  "days_left": 5
+}
