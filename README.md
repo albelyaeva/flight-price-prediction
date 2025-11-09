@@ -90,6 +90,22 @@ docker build -t flight-price-service .
 docker run -p 9696:9696 flight-price-service
 ```
 
+## Cloud Deployment
+
+The service is deployed on Render as a Dockerized web service.
+
+Endpoint (POST):
+`https://flight-price-prediction-6kw1.onrender.com/predict`
+
+Example request:
+```bash
+
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"airline": "Vistara", "flight": "UK-811", "source_city": "Delhi", "departure_time": "Morning", "stops": "non-stop", "arrival_time": "Evening", "destination_city": "Mumbai", "class": "Economy", "duration": 135, "days_left": 20}' \
+  https://flight-price-prediction-6kw1.onrender.com/predict
+  
+```
+
 
 ### Midterm Project - ML Zoomcamp 2025
 ### Flight Price Prediction
